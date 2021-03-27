@@ -1,4 +1,4 @@
 import "./sorting/BubbleSortStrategy";
-import {BubbleSortStrategy} from "./sorting/BubbleSortStrategy";
+import {BubbleSortStrategy} from "./sorting/BubbleSortStrategy"
 
-const bubbleSort = new BubbleSortStrategy();
+const bubbleSort = new BubbleSortStrategy()
