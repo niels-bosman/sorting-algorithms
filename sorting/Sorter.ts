@@ -1,6 +1,8 @@
+import {Timer} from "../timer/Timer";
+
 export class Sorter
 {
-    private numbers: Array<number>
+    protected numbers: Array<number>
     private SORT_AMOUNT: number = 10000
     private MAX_RANDOM_NUMBER_AMOUNT: number = 10000
 
