@@ -21,12 +21,14 @@ var Timer_1 = require("../timer/Timer");
 var BubbleSortStrategy = /** @class */ (function (_super) {
     __extends(BubbleSortStrategy, _super);
     function BubbleSortStrategy() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.ALGORITHM = "Bubble sort";
+        return _this;
     }
     BubbleSortStrategy.prototype.start = function () {
-        Timer_1.Timer.start();
+        Timer_1.Timer.start(this.ALGORITHM);
         this.sort();
-        Timer_1.Timer.stop();
+        Timer_1.Timer.stop(this.ALGORITHM);
     };
     BubbleSortStrategy.prototype.sort = function () {
         var sortable = this.numbers;
