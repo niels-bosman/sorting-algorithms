@@ -16,15 +16,15 @@ export class BubbleSortStrategy extends Sorter implements SortStrategy
         const sortable: Array<number> = this.numbers
 
         sortable.forEach(() => {
-            sortable.forEach((number, index) => {
+            sortable.forEach((_, index) => {
                 const nextIndex: number = index + 1
                 // If the iterable number is bigger than the next
                 // index we want to swap them. We do this using a
                 // temporary variable.
-                if (number[index] > number[nextIndex]) {
-                    const temporary: number = number[index]
-                    number[index] = number[nextIndex]
-                    number[nextIndex] = temporary
+                if (sortable[index] > sortable[nextIndex]) {
+                    const temporary: number = sortable[index]
+                    sortable[index] = sortable[nextIndex]
+                    sortable[nextIndex] = temporary
                 }
             })
         })
