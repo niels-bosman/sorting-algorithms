@@ -1,6 +1,6 @@
-import {SortStrategy} from './SortStrategy';
-import {Timer} from '../timer/Timer';
-import {Sorter} from './Sorter';
+import {SortStrategy} from './SortStrategy'
+import {Timer} from '../timer/Timer'
+import {Sorter} from './Sorter'
 
 export class QuickSortStrategy extends Sorter implements SortStrategy
 {
@@ -22,7 +22,7 @@ export class QuickSortStrategy extends Sorter implements SortStrategy
             return sortable
         }
 
-        // Decide where the pivot index lays (where to split the 2).
+        // Decide where the pivot index lays (where to split the 2 sides).
         const pivotIndex: number = Math.floor(sortable.length / 2),
               pivotProperty: number = sortable[pivotIndex]
 

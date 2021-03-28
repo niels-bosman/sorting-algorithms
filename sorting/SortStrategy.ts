@@ -1,4 +1,5 @@
-export interface SortStrategy {
+export interface SortStrategy
+{
     /**
      * Starts the timers and sorts the numbers.
      **/
