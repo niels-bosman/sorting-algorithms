@@ -1,10 +1,16 @@
 export class Timer
 {
-    public static start(sortingAlgo: string) {
-        console.time(sortingAlgo)
+    private readonly notifier: string
+
+    constructor(notifier: string) {
+        this.notifier = notifier
     }
 
-    public static stop(sortingAlgo: string) {
-        console.timeEnd(sortingAlgo)
+    public start() {
+        console.time(this.notifier)
+    }
+
+    public stop() {
+        console.timeEnd(this.notifier)
     }
 }

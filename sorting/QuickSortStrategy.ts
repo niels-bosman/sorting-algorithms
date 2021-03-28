@@ -4,19 +4,20 @@ import {Sorter} from "./Sorter";
 
 export class QuickSortStrategy extends Sorter implements SortStrategy
 {
-    private ALGORITHM: string = "Quick sort"
+    private ALGORITHM: string = 'Quick sort'
+    private timer: Timer = new Timer(this.ALGORITHM)
 
-    start(): void {
-        Timer.start(this.ALGORITHM)
+    public start(): void {
+        this.timer.start()
         this.sort()
-        Timer.stop(this.ALGORITHM)
+        this.timer.stop()
     }
 
-    sort(): Array<number> {
+    public sort(): Array<number> {
         return this.quick(this.numbers)
     }
 
-    quick(sortable: Array<number>): Array<number> {
+    private quick(sortable: Array<number>): Array<number> {
         if (sortable.length <= 1) {
             return sortable
         }

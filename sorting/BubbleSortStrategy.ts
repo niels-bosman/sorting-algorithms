@@ -4,12 +4,13 @@ import {Timer} from '../timer/Timer'
 
 export class BubbleSortStrategy extends Sorter implements SortStrategy
 {
-    private ALGORITHM: string = "Bubble sort"
+    private ALGORITHM: string = 'Bubble sort'
+    private timer: Timer = new Timer(this.ALGORITHM)
 
-    start(): void {
-        Timer.start(this.ALGORITHM)
+    public start(): void {
+        this.timer.start()
         this.sort()
-        Timer.stop(this.ALGORITHM)
+        this.timer.stop()
     }
 
     public sort(): Array<number> {
