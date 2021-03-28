@@ -1,6 +1,6 @@
-import {SortStrategy} from "./SortStrategy";
-import {Timer} from "../timer/Timer";
-import {Sorter} from "./Sorter";
+import {SortStrategy} from './SortStrategy';
+import {Timer} from '../timer/Timer';
+import {Sorter} from './Sorter';
 
 export class QuickSortStrategy extends Sorter implements SortStrategy
 {

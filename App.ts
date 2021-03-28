@@ -1,6 +1,5 @@
-import {SortStrategy} from "./sorting/SortStrategy";
-import {BubbleSortStrategy} from "./sorting/BubbleSortStrategy";
-import {QuickSortStrategy} from "./sorting/QuickSortStrategy";
+import {BubbleSortStrategy} from './sorting/BubbleSortStrategy';
+import {QuickSortStrategy} from './sorting/QuickSortStrategy';
 
 export class App
 {
