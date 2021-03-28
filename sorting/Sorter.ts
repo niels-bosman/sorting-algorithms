@@ -2,7 +2,7 @@ import {Timer} from "../timer/Timer";
 
 export class Sorter
 {
-    protected numbers: Array<number>
+    public numbers: Array<number> = []
     private SORT_AMOUNT: number = 10000
     private MAX_RANDOM_NUMBER_AMOUNT: number = 10000
 
@@ -18,7 +18,7 @@ export class Sorter
      **/
     private addNumbers(): void {
         for (let i: number = 0; i <= this.SORT_AMOUNT; i++) {
-            this.numbers.concat(this.getRandomNumber())
+            this.numbers.push(this.getRandomNumber())
         }
     }
 

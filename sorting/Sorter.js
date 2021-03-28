@@ -2,19 +2,28 @@
 exports.__esModule = true;
 exports.Sorter = void 0;
 var Sorter = /** @class */ (function () {
+    /**
+     *  Makes sure all the sortable data is ready when a sorter is instantiated.
+     **/
     function Sorter() {
+        this.numbers = [];
         this.SORT_AMOUNT = 10000;
         this.MAX_RANDOM_NUMBER_AMOUNT = 10000;
-        this.generate();
+        this.addNumbers();
     }
-    Sorter.prototype.generate = function () {
+    /**
+     *  Adds numbers to the numbers array.
+     **/
+    Sorter.prototype.addNumbers = function () {
         for (var i = 0; i <= this.SORT_AMOUNT; i++) {
-            var randomNumber = Math.floor(Math.random() * this.MAX_RANDOM_NUMBER_AMOUNT) + 1;
-            this.numbers.concat(randomNumber);
+            this.numbers.push(this.getRandomNumber());
         }
     };
-    Sorter.prototype.getNumbers = function () {
-        return this.numbers;
+    /**
+     *  Generates a random number between 1 and the MAX_RANDOM_NUMBER_AMOUNT
+     **/
+    Sorter.prototype.getRandomNumber = function () {
+        return Math.floor(Math.random() * this.MAX_RANDOM_NUMBER_AMOUNT) + 1;
     };
     return Sorter;
 }());

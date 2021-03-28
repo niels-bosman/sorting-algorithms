@@ -1,7 +1,9 @@
-import {SortStrategy} from "./sorting/SortStrategy";
-import {BubbleSortStrategy} from "./sorting/BubbleSortStrategy";
+import {SortStrategy} from './sorting/SortStrategy'
+import {BubbleSortStrategy} from './sorting/BubbleSortStrategy'
 
-declare let sortStrategy: SortStrategy
+// How to run:
+// tsc main.ts && node main.js
 
-sortStrategy = new BubbleSortStrategy()
-sortStrategy.sort()
+let bubbleSort: SortStrategy = new BubbleSortStrategy()
+
+bubbleSort.start()

@@ -1,13 +1,15 @@
-import {SortStrategy} from "./SortStrategy"
-import {Sorter} from "./Sorter"
-import {Timer} from "../timer/Timer";
+import {SortStrategy} from './SortStrategy'
+import {Sorter} from './Sorter'
+import {Timer} from '../timer/Timer'
 
 export class BubbleSortStrategy extends Sorter implements SortStrategy
 {
+    private ALGORITHM: string = "Bubble sort"
+
     start(): void {
-        Timer.start()
+        Timer.start(this.ALGORITHM)
         this.sort()
-        Timer.stop()
+        Timer.stop(this.ALGORITHM)
     }
 
     public sort(): Array<number> {

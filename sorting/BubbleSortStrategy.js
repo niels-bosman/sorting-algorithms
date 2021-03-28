@@ -17,14 +17,33 @@ var __extends = (this && this.__extends) || (function () {
 exports.__esModule = true;
 exports.BubbleSortStrategy = void 0;
 var Sorter_1 = require("./Sorter");
+var Timer_1 = require("../timer/Timer");
 var BubbleSortStrategy = /** @class */ (function (_super) {
     __extends(BubbleSortStrategy, _super);
     function BubbleSortStrategy() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    BubbleSortStrategy.prototype.start = function () {
+        Timer_1.Timer.start();
+        this.sort();
+        Timer_1.Timer.stop();
+    };
     BubbleSortStrategy.prototype.sort = function () {
-        // TODO: Generate sorting algo.
-        return [];
+        var sortable = this.numbers;
+        sortable.forEach(function () {
+            sortable.forEach(function (number, index) {
+                var nextIndex = index + 1;
+                // If the iterable number is bigger than the next
+                // index we want to swap them. We do this using a
+                // temporary variable.
+                if (number[index] > number[nextIndex]) {
+                    var temporary = number[index];
+                    number[index] = number[nextIndex];
+                    number[nextIndex] = temporary;
+                }
+            });
+        });
+        return sortable;
     };
     return BubbleSortStrategy;
 }(Sorter_1.Sorter));

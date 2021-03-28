@@ -1,9 +1,10 @@
-export class Timer {
-    public static start() {
-        console.time("Sorting started.")
+export class Timer
+{
+    public static start(sortingAlgo: string) {
+        console.time(sortingAlgo)
     }
 
-    public static stop() {
-        console.timeEnd("Sorting done.")
+    public static stop(sortingAlgo: string) {
+        console.timeEnd(sortingAlgo)
     }
 }
