@@ -22,20 +22,26 @@ export class QuickSortStrategy extends Sorter implements SortStrategy
             return sortable
         }
 
-        const pp: number = Math.floor(sortable.length / 2), pivot: number = sortable[pp];
+        // Decide where the pivot index lays (where to split the 2).
+        const pivotIndex: number = Math.floor(sortable.length / 2),
+              pivotProperty: number = sortable[pivotIndex]
+
         const left: Array<number> = [], right: Array<number> = [];
 
         sortable.forEach((number, index) => {
-            if (index == pp) {
+            if (index == pivotIndex) {
                 return
             }
-            if (number < pivot) {
+
+            // Decide which side to push it to based on it's content.
+            if (number < pivotProperty) {
                 left.push(sortable[index])
             } else {
                 right.push(sortable[index])
             }
         })
 
-        return this.quick(left).concat(pivot, this.quick(right));
+        // Join the left and right half together and let them run recursively.
+        return this.quick(left).concat(pivotProperty, this.quick(right));
     }
 }
