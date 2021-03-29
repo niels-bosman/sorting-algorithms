@@ -8,7 +8,7 @@ export interface SortStrategy
     /**
      * Sorts an array of numbers with a specific algorithm.
      *
-     * @return {Array<number>} The sorted array
+     * @return {number[]} The sorted array
      **/
-    sort(): Array<number>
+    sort(): number[]
 }

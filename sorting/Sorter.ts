@@ -1,8 +1,8 @@
 export class Sorter
 {
-    public numbers: Array<number> = []
-    private SORT_AMOUNT: number = 10000
-    private MAX_RANDOM_NUMBER_AMOUNT: number = 10000
+    public numbers: number[] = []
+    private SORT_AMOUNT = 10000
+    private MAX_RANDOM_NUMBER_AMOUNT = 10000
 
     /**
      *  Makes sure all the sortable data is ready when a sorter is instantiated.

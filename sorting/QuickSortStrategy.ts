@@ -4,8 +4,8 @@ import {Sorter} from './Sorter'
 
 export class QuickSortStrategy extends Sorter implements SortStrategy
 {
-    private ALGORITHM: string = 'Quick sort'
-    private timer: Timer = new Timer(this.ALGORITHM)
+    private ALGORITHM = 'Quick sort'
+    private timer = new Timer(this.ALGORITHM)
 
     public start(): void {
         this.timer.start()
@@ -13,21 +13,21 @@ export class QuickSortStrategy extends Sorter implements SortStrategy
         this.timer.stop()
     }
 
-    public sort(): Array<number> {
+    public sort(): number[] {
         return this.quick(this.numbers)
     }
 
-    private quick(sortable: Array<number>): Array<number> {
+    private quick(sortable: number[]): number[] {
         if (sortable.length <= 1) {
             return sortable
         }
 
         // Decide where the pivot index lays (where to split the 2 sides).
         // Also define the constants for the two sides.
-        const pivotIndex: number = Math.floor(sortable.length / 2),
-              pivotProperty: number = sortable[pivotIndex],
-              left: Array<number> = [],
-              right: Array<number> = []
+        const pivotIndex = Math.floor(sortable.length / 2),
+              pivotProperty = sortable[pivotIndex],
+              left = [],
+              right = []
 
         sortable.forEach((number, index) => {
             if (index == pivotIndex) {
