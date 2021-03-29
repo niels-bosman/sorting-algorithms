@@ -1,3 +1,5 @@
+import {Timer} from "../timer/Timer";
+
 export class Sorter
 {
     public numbers: number[] = []
