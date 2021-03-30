@@ -14,6 +14,6 @@ export class NativeSortStrategy extends Sorter implements SortStrategy
     }
 
     sort(): number[] {
-        return this.numbers.sort((a: number, b:number) => a - b)
+        return this.numbers.sort((a: number, b: number) => a - b)
     }
 }
