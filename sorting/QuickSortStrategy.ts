@@ -25,9 +25,9 @@ export class QuickSortStrategy extends Sorter implements SortStrategy
         // Decide where the pivot index lays (where to split the 2 sides).
         // Also define the constants for the two sides.
         const pivotIndex = Math.floor(sortable.length / 2),
-              pivotProperty = sortable[pivotIndex],
-              left = [],
-              right = []
+            pivotProperty = sortable[pivotIndex],
+            left = [],
+            right = []
 
         sortable.forEach((number, index) => {
             if (index == pivotIndex) {
