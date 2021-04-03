@@ -7,14 +7,14 @@ export class QuickSortStrategy extends Sorter implements SortStrategy
     private ALGORITHM = 'Quick sort'
     private timer = new Timer(this.ALGORITHM)
 
-    public start(): void {
+    public async start(): Promise<void> {
         this.timer.start()
-        this.sort()
+        await this.sort()
         this.timer.stop()
     }
 
-    public sort(): number[] {
-        return this.quick(this.numbers)
+    async sort(): Promise<number[]> {
+        return this.quick(this.numbers);
     }
 
     private quick(sortable: number[]): number[] {
@@ -26,8 +26,8 @@ export class QuickSortStrategy extends Sorter implements SortStrategy
         // Also define the constants for the two sides.
         const pivotIndex = Math.floor(sortable.length / 2),
             pivotProperty = sortable[pivotIndex],
-            left = [],
-            right = []
+            left: number[] = [],
+            right: number[] = []
 
         sortable.forEach((number, index) => {
             if (index == pivotIndex) {

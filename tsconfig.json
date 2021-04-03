@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "preserveConstEnums": true,
+    "strict": true,
+    "target": "ESNext",
+    "lib": [
+      "ES2015",
+      "DOM"
+    ]
+  },
+  "files": [
+    "main.ts"
+  ],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

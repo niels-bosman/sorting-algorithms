@@ -7,13 +7,13 @@ export class BubbleSortStrategy extends Sorter implements SortStrategy
     private ALGORITHM = 'Bubble sort'
     private timer = new Timer(this.ALGORITHM)
 
-    public start(): void {
+    async start(): Promise<void> {
         this.timer.start()
-        this.sort()
+        await this.sort()
         this.timer.stop()
     }
 
-    public sort(): number[] {
+    async sort(): Promise<number[]> {
         const sortable: number[] = this.numbers
 
         sortable.forEach(() => {
@@ -30,6 +30,6 @@ export class BubbleSortStrategy extends Sorter implements SortStrategy
             })
         })
 
-        return sortable
+        return sortable;
     }
 }

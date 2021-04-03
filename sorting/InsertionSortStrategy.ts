@@ -7,13 +7,13 @@ export class InsertionSortStrategy extends Sorter implements SortStrategy
     private ALGORITHM = 'Insertion sort'
     private timer = new Timer(this.ALGORITHM)
 
-    public start(): void {
+    async start(): Promise<void> {
         this.timer.start()
-        this.sort()
+        await this.sort()
         this.timer.stop()
     }
 
-    public sort(): number[] {
+    async sort(): Promise<number[]> {
         let length = this.numbers.length
 
         for (let i = 1; i < length; i++) {
