@@ -17,13 +17,13 @@ export class InsertionSortStrategy extends Sorter implements SortStrategy
         let length = this.numbers.length;
 
         for (let i = 1; i < length; i++) {
-            let key = this.numbers[i];
-            let j = i - 1;
-            while (j >= 0 && this.numbers[j] > key) {
-                this.numbers[j + 1] = this.numbers[j];
-                j = j - 1;
+            let current = this.numbers[i];
+            let previous = i - 1;
+            while (previous >= 0 && this.numbers[previous] > current) {
+                this.numbers[previous + 1] = this.numbers[previous];
+                previous = previous - 1;
             }
-            this.numbers[j + 1] = key;
+            this.numbers[previous + 1] = current;
         }
         return this.numbers;
     }
