@@ -17,7 +17,7 @@ export class InsertionSortStrategy extends Sorter implements SortStrategy
         let length = this.numbers.length;
 
         for (let i = 1; i < length; i++) {
-            let current = this.numbers[i];
+            const current = this.numbers[i];
             let previous = i - 1;
             while (previous >= 0 && this.numbers[previous] > current) {
                 this.numbers[previous + 1] = this.numbers[previous];
