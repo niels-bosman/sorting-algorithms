@@ -9,11 +9,11 @@ export class Timer
     }
 
     public start() {
-        this.startTime = new Date().valueOf()
+        this.startTime = Date.now()
     }
 
     public stop() {
-        this.endTime = new Date().valueOf()
+        this.endTime = Date.now()
         this.printMessage()
     }
 
