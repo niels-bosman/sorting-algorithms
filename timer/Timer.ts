@@ -22,6 +22,6 @@ export class Timer
     }
 
     private getTimeSpentInSeconds(): number {
-        return this.endTime - this.startTime / 1000
+        return (this.endTime - this.startTime) / 1000
     }
 }
