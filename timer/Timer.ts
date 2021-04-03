@@ -22,9 +22,6 @@ export class Timer
     }
 
     private getTimeSpentInSeconds(): number {
-        let timeDiff = this.endTime - this.startTime
-        timeDiff /= 1000
-
-        return timeDiff;
+        return this.endTime - this.startTime / 1000
     }
 }
