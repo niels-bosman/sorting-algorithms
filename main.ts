@@ -1,6 +1,6 @@
 import {App} from './App'
 
 // How to run:
-// tsc main.ts && node main.js
+// tsc -p ./tsconfig.json && node main.js
 
 new App()

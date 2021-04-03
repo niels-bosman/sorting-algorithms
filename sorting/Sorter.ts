@@ -1,7 +1,7 @@
 export class Sorter
 {
     public numbers: number[] = []
-    private SORT_AMOUNT = 10000
+    private SORT_AMOUNT = 50000
     private MAX_RANDOM_NUMBER_AMOUNT = 10000
 
     /**
