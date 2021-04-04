@@ -16,9 +16,9 @@ export class InsertionSortStrategy extends Sorter implements SortStrategy
     async sort(): Promise<number[]> {
         let length = this.numbers.length
 
-        for (let i = 1; i < length; i++) {
-            const current = this.numbers[i]
-            let previous = i - 1
+        for (let index = 1; index < length; index++) {
+            const current = this.numbers[index]
+            let previous = index - 1
             while (previous >= 0 && this.numbers[previous] > current) {
                 this.numbers[previous + 1] = this.numbers[previous]
                 previous = previous - 1
