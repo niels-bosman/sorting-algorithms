@@ -9,22 +9,22 @@ export class InsertionSortStrategy extends Sorter implements SortStrategy
 
     async start(): Promise<void> {
         this.timer.start()
-        await this.sort()
+        await this.sort(this.numbers)
         this.timer.stop()
     }
 
-    async sort(): Promise<number[]> {
-        let length = this.numbers.length
+    async sort(sortable: number[]): Promise<number[]> {
+        let length = sortable.length
 
         for (let index = 1; index < length; index++) {
-            const current = this.numbers[index]
+            const current = sortable[index]
             let swappable = index - 1
-            while (swappable >= 0 && this.numbers[swappable] > current) {
-                this.numbers[swappable + 1] = this.numbers[swappable]
+            while (swappable >= 0 && sortable[swappable] > current) {
+                sortable[swappable + 1] = sortable[swappable]
                 swappable = swappable - 1
             }
-            this.numbers[swappable + 1] = current
+            sortable[swappable + 1] = current
         }
-        return this.numbers
+        return sortable
     }
 }

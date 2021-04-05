@@ -9,13 +9,11 @@ export class BubbleSortStrategy extends Sorter implements SortStrategy
 
     async start(): Promise<void> {
         this.timer.start()
-        await this.sort()
+        await this.sort(this.numbers)
         this.timer.stop()
     }
 
-    async sort(): Promise<number[]> {
-        const sortable: number[] = this.numbers
-
+    async sort(sortable: number[]): Promise<number[]> {
         sortable.forEach(() => {
             sortable.forEach((_, index) => {
                 const nextIndex = index + 1

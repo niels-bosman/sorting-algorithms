@@ -9,11 +9,11 @@ export class NativeSortStrategy extends Sorter implements SortStrategy
 
     async start(): Promise<void> {
         this.timer.start()
-        await this.sort()
+        await this.sort(this.numbers)
         this.timer.stop()
     }
 
-    async sort(): Promise<number[]> {
-        return this.numbers.sort((a: number, b: number) => a - b)
+    async sort(sortable: number[]): Promise<number[]> {
+        return sortable.sort((a: number, b: number) => a - b)
     }
 }

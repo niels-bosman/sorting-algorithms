@@ -10,5 +10,5 @@ export interface SortStrategy
      *
      * @return {number[]} The sorted array
      **/
-    sort(): Promise<number[]>
+    sort(sortable: number[]): Promise<number[]>
 }

@@ -9,12 +9,12 @@ export class QuickSortStrategy extends Sorter implements SortStrategy
 
     public async start(): Promise<void> {
         this.timer.start()
-        await this.sort()
+        await this.sort(this.numbers)
         this.timer.stop()
     }
 
-    async sort(): Promise<number[]> {
-        return this.quick(this.numbers);
+    async sort(sortable: number[]): Promise<number[]> {
+        return this.quick(sortable);
     }
 
     private quick(sortable: number[]): number[] {
