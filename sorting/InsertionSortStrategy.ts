@@ -18,12 +18,12 @@ export class InsertionSortStrategy extends Sorter implements SortStrategy
 
         for (let index = 1; index < length; index++) {
             const current = this.numbers[index]
-            let previous = index - 1
-            while (previous >= 0 && this.numbers[previous] > current) {
-                this.numbers[previous + 1] = this.numbers[previous]
-                previous = previous - 1
+            let swappable = index - 1
+            while (swappable >= 0 && this.numbers[swappable] > current) {
+                this.numbers[swappable + 1] = this.numbers[swappable]
+                swappable = swappable - 1
             }
-            this.numbers[previous + 1] = current
+            this.numbers[swappable + 1] = current
         }
         return this.numbers
     }
