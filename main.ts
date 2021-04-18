@@ -6,4 +6,4 @@ import {App} from './App'
 // How to test:
 // npm t
 
-new App()
+new App
