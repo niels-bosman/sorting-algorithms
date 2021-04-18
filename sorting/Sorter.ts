@@ -16,14 +16,14 @@ export class Sorter
      **/
     private addNumbers(): void {
         for (let i: number = 0; i <= this.SORT_AMOUNT; i++) {
-            this.numbers.push(this.getRandomNumber())
+            this.numbers.push(this.randomNumber)
         }
     }
 
     /**
      *  Generates a random number between 1 and the MAX_RANDOM_NUMBER_AMOUNT
      **/
-    private getRandomNumber(): number {
+    private get randomNumber(): number {
         return Math.floor(Math.random() * this.MAX_RANDOM_NUMBER_AMOUNT) + 1
     }
 }
